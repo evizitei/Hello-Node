@@ -1,0 +1,19 @@
+Hello Node is a node.js web application built using the Express web framework.  As the title indicates, it's simply a hello world, but in the full application format to happily introduce the common application structure.
+
+To use, you must install a few things:
+
+Node.js, of course (see http://nodejs.org)
+node package manager (see here: http://howtonode.org/introduction-to-npm)
+and then:
+
+  npm install express
+  npm install jade
+  npm install less
+  
+the above lines install the express web framework, the jade templating library, and the less css library.
+
+Then, from the home directory of the app:
+
+  node app.js
+  
+and hit http://localhost:3000 with your browser
