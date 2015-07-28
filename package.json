@@ -6,6 +6,7 @@
   "author": "Ethan Vizitei <evizitei@instructure.com>",
   "start": "node server.js",
   "dependencies": {
+    "body-parser": "1.13.2",
     "express": "3.2.4"
   }
 }
