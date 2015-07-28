@@ -1,19 +1,30 @@
-Hello Node is a node.js web application built using the Express web framework.  As the title indicates, it's simply a hello world, but in the full application format to happily introduce the common application structure.
+Hello, Node.
 
-To use, you must install a few things:
+Use Dinghy! (https://github.com/codekitchen/dinghy)
 
-Node.js, of course (see http://nodejs.org)
-node package manager (see here: http://howtonode.org/introduction-to-npm)
-and then:
+Assuming from this point forward that dinghy is up and running.
 
-  npm install express
-  npm install jade
-  npm install less
-  
-the above lines install the express web framework, the jade templating library, and the less css library.
+Base Image is here: https://registry.hub.docker.com/_/node/
 
-Then, from the home directory of the app:
+Right now, this is just a hello world webapp in a docker container.
 
-  node app.js
-  
-and hit http://localhost:3000 with your browser
+To build the image:
+
+```bash
+$> docker build -t hello-node
+```
+
+Once the image exists, startup the server with:
+
+```bash
+$> docker run --publish 6061:8080 --rm --name test-node hello-node
+```
+
+Find your address with
+
+```bash
+$> dinghy ip
+```
+
+You should be able to see json output containing "hello world" returned in the browser by
+visiting "http://dinghy-ip:6061".
